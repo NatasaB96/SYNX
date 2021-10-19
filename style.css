@@ -1,0 +1,909 @@
+/*
+https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
+*/
+@import url('https://fonts.googleapis.com/css?family=Gugi|Kaushan+Script|Source+Sans+Pro');
+
+:root{
+    --crvena: #ef233c;
+    --tamnosiva: #414141;
+    --bela: #fff;
+    --svetlosiva:#f2f2f2;
+    --ljubicasta: #732673;
+    --transition: .4s ease;   
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kaushan Script', cursive;
+}
+
+button{
+    background: var(--crvena);
+    color: var(--bela);
+    font-size: 1rem;
+    padding: 15px 70px;
+    border: none;
+}
+
+button:hover{
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.title{
+    text-decoration: none;
+    color: var(--crvena);
+    font-weight: 800;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem; 
+}
+
+hr{
+    height: 3px;
+    border: none;
+    background: var(--crvena);
+    width: 15%;
+    margin: 10px 0;
+    
+}
+
+/* header */
+
+header{
+    background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(img/header.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+header nav{
+    background: var(--bela);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;
+    top: 20px;
+
+}
+
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+header nav ul li{
+    margin: 0 20px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--tamnosiva);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+header nav .logo{
+    font-weight: 600;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;  
+    padding: 10px 0 10px 20px;
+    text-decoration: none;
+    color: var(--tamnosiva);
+}
+
+
+header .logo div{
+     font-family: 'Gugi'; 
+}
+
+header .logo div span:first-child{
+    color: var(--crvena);
+    font-size: 2rem;
+}
+
+
+header .logo  span:last-child{
+    color: var(--ljubicasta);
+    font-size: 1.2rem;
+    
+} 
+
+header hgroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    color: var(--bela);
+}
+
+header hgroup h1{
+    font-size: 4rem;
+}
+
+header hgroup p{
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 15px 0;
+}
+
+/* section one */
+
+.one{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.one img{
+    width: 100%;
+}
+
+.one .col{
+    flex: 1;
+}
+
+.one .col:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding-left: 20px;
+}
+
+.one .col:first-child h4{
+    font-size: 1.4rem;
+}
+
+.one .col:first-child p{
+    padding: 15px 0;
+    font-size: 1.1rem;
+}
+
+.one .col:last-child {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* section two */
+
+.two{
+    background: var(--svetlosiva);
+    padding: 20px 0;
+}
+
+.two .row:first-child{
+    text-align: center;
+}
+
+.two .row:first-child hr{
+    margin: 20px auto;
+    width: 10%;
+}
+
+.two .row:first-child h4{
+    font-size: 1.4rem;
+}
+
+.two .row:first-child p{
+    padding: 15px 0;
+    font-size: 1.1rem;
+}
+
+.two .row:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.two .row:last-child .col{
+    flex: 1;
+}
+
+.two .row:last-child .col-1 h4::before{
+    font-family: "Font Awesome 5 Brands"; content: "\f099"; color: var(--crvena);
+}
+
+.two .row:last-child .col-2 h4::before{
+    font-family: "Font Awesome 5 Free"; content: "\f0d0"; color: var(--crvena);
+}
+
+.two .row:last-child .col-3 h4::before{
+    font-family: "Font Awesome 5 Free"; content: "\f140"; color: var(--crvena);
+}
+
+.two .row:last-child .col p{
+    padding-bottom: 15px;
+}
+
+.two .row:last-child .col a{
+    color: var(--crna); 
+}
+
+/* section three */
+
+.three article{
+    background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(img/three.jpg);
+    height: 25px;
+    background-position:bottom;
+}
+
+.three{
+    background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(img/three.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+.three hgroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 70vh;
+}
+
+.three hgroup h4{
+    color: var(--bela);
+    font-size: 1.8rem;
+}
+
+.three hgroup p{
+    color: var(--bela);
+    font-size: 1.1rem;
+    text-align:end;
+    padding: 20px 0;
+}
+
+/* section four */
+.four{
+    padding: 20px 0;
+}
+
+.four hgroup{
+    text-align: center;
+    padding: 40px 0;
+}
+
+.four hgroup h4{
+    color: var(--crna);
+    font-size: 2.5rem;
+}
+
+.four .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.four .row .img1 {
+    background-image: url(img/people1.jpg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+}
+
+.four .row .col-img,
+.four .row .col-txt{
+    flex: 1;
+}
+
+.four .row .txt1 hgroup{
+    margin-left: 50px;
+
+}
+
+.four .row .txt1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.four .row .col-txt hgroup p{
+    text-align: justify;
+
+}
+
+.four .row .col-txt hgroup h5{
+    font-size: 1.7rem;
+    color: var(--crvena);
+    text-align: justify;
+
+}
+
+.four .row .col-txt hgroup h6{
+    font-size: 1.1rem;
+    color: var(--crna); 
+    text-align: justify;
+}
+
+.four .icons{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+ 
+  
+}
+
+.four .icons li{
+    list-style: none;
+    display: flex;
+
+}
+
+.four .icons li a{
+    margin-right: 90px;
+    font-size: 1.3rem;
+}
+
+
+.four i{
+    font-size: 2rem;
+    border-radius: 5px;
+    color: var(--crvena);
+    background: var(--bela); 
+} 
+
+.four .row .img2 {
+    background-image: url(img/people2.jpg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+}
+
+.four .row .txt2 hgroup{
+    margin-right: 50px;
+
+}
+
+.four .row .txt2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.four .row .img3 {
+    background-image: url(img/people3.jpg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+}
+
+/* section five */
+.five div{
+    background: var(--crvena);
+    padding: 10px 0;
+    color: var(--bela);
+    text-align: center;
+}
+
+.five .title{
+    color: var(--bela);
+}
+
+.five .all{
+    display: flex;
+    height: 80vh;
+} /* Na kraju da slika levo i desno budu jedna pored druge */
+
+.five .all .img-left{
+    flex: 0 0 50%;
+    background-image: url(img/project1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;  
+}
+
+.five .all .img-right{
+    flex:0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+} /* Generalno za desnu sliku 
+Isto zauzima ekrana*/
+
+
+.five .all .img-right .row{
+    flex:0 0 50%;
+}
+
+.five .all .img-right .row:nth-child(1){
+    background-image: url(img/project9.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.five .all .img-right .row:nth-child(2){
+    background-image: url(img/project3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.five .all .img-right .row:nth-child(3){
+    background-image: url(img/project4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.five .all .img-right .row:nth-child(4){
+    background-image: url(img/project11.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* section six */
+.six{
+    padding: 50px;
+    display: flex;
+    text-align: center;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.six article{
+    flex: 0 0 25%;
+}
+
+.six article h3{
+    color: var(--crvena);
+    font-size: 4rem;
+}
+
+.six article h4{
+    text-transform: uppercase;
+    padding: 20px;
+    
+}
+
+.six article p{
+    font-size: 1.1rem;
+    padding: 5px;
+}
+
+/* section seven*/
+
+.seven{
+    padding: 40px 0;
+}
+
+.seven hgroup{
+    text-align: center;
+}
+
+.seven hgroup h2{
+    font-size: 2.8rem;
+}
+
+.seven hgroup p{
+    padding: 10px 0 40px 0;
+}
+
+.seven .row{
+    display: flex;
+    justify-content:space-between;
+}
+
+.seven .row .col{
+    flex: 0 0 30%;
+    padding: 40px;
+}
+
+.seven .row .col .price{
+    display: flex;
+} 
+
+.seven .row .col h3{
+    position: relative;
+    right: -10px;
+}
+
+.seven .row .col .price h2{
+    font-size: 1.9rem;
+}
+
+.seven .row .col .price p{
+    color: var(--crvena);
+    font-weight: bolder;
+    font-size: 1.2rem;
+} 
+
+.seven .check p::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 400;
+    content: "\f14a";
+    color: var(--crvena);
+    margin-right: 5px;
+}
+
+.seven .check {
+    margin-top: 30px;
+}
+
+.seven .check p{
+    padding: 5px 0;
+}
+
+.seven .col:nth-child(2){
+    border: 2px solid lightgray;
+    box-shadow: 0 0 20px lightgray;
+}
+
+/* section eight */
+
+.eight{
+    background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(img/ten.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eight h4{
+    color: var(--bela);
+    font-size: 1.8rem;
+}
+
+.eight p{
+    color: var(--crvena);
+    margin-top: 20px;
+    font-size: .9rem;
+}
+
+
+/* section nine */
+
+.nine{
+    padding: 40px 0;
+    background:  var(--svetlosiva); 
+}
+
+.nine h2{
+    font-size: 1.9rem;
+}
+
+/* section ten */
+
+.ten{
+    padding: 20px 0;
+}
+
+.ten hgroup h4{
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.ten hgroup h4 span{
+    color: var(--crvena);
+}
+
+.ten form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ten form input{
+    flex: 0 0 50%;
+    margin: 20px 0 10px 0;
+    padding: 10px;
+}
+
+.ten form textarea{
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+}
+
+.ten form button{
+    text-transform: uppercase;
+}
+
+/* footer */
+footer{
+    background: var(--crvena);
+    color: var(--bela);
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer .icons li a{
+    color: var(--bela);
+    margin: 20px;
+    font-size: 1.4rem;
+
+}
+
+footer p{
+    font-size: .7rem;
+} 
+
+/*Responsive */
+
+@media(max-width:768px){
+
+    header {
+        height: 70vh;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    header hgroup{
+        height: 65vh;
+    }
+
+    header hgroup h1 {
+        font-size: 2.9rem;
+        text-align: center;
+    }
+    
+     header hgroup p{
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: .9rem;
+        margin-top: 10px;
+    }
+
+    .one .col {
+        flex: 0 0 100%;
+    }
+
+    .one .col:first-child {
+        height: 300px;
+        align-items: center;
+    }
+    
+     .one .col:first-child h4{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .one .col:first-child p{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .two .row:first-child {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .two .row:first-child p{
+        font-size: 1.2rem;
+    }
+    
+    .two .row:first-child h4{
+        font-size: 1.8rem;
+    }
+    
+    .two .row:last-child {
+        padding-top: 0px;
+    }
+    
+    button{
+        padding: 10px 40px;
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    
+   
+    .two .row:last-child { 
+        flex-direction: column;
+    }
+    
+    .two .row:last-child .col{
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.7rem;
+    }
+    
+     .two .row:last-child .col p{
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .two .row:last-child .col a{
+        padding-bottom: 40px;
+    }
+    
+    .three hgroup {
+        height: 40vh;
+        margin-right: 20px;
+    }
+    
+    .three hgroup a{
+        font-size: 1.2rem;
+        position: relative;
+        right: 60px;
+    }
+    
+    .three hgroup h4{
+        font-size: 2.5rem;
+    }
+    
+    .three hgroup p{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .three hgroup button{
+        position: relative;
+        right: 100px;
+    }
+    
+    .three .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .four{
+        padding: 0px;
+    }
+    
+    .four .row .col-img, .four .row .col-txt {
+    flex: 0 0 100%;
+    }
+    
+    .four .row .col-txt hgroup h6 {
+        font-size: 1.8rem;}
+    
+    .four .row .col-txt hgroup h6 {
+        font-size: 1.6rem;
+    }
+    
+    .four .row .txt1 ,
+    .four .row .txt2 
+    {
+    font-size: 1.5rem;
+    }
+    
+    .four .row .txt1 hgroup,
+    .four .row .txt2 hgroup
+    {
+
+        margin: 20px;
+    }
+    
+
+    .four .row .img2 {
+        order: 0;
+    }
+    
+    .four .row .txt2 {
+        order: 1;
+    }
+    
+    .five .all{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .five div {
+        padding:20px 0;
+    }
+    
+    .six article {
+        flex: 0 0 100%;
+    }
+    
+    .six article h4{
+        font-size: 1.4rem;
+    }
+    
+    .six article p {
+        font-size: 1.4rem;
+    }
+    
+    .seven .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    
+    .seven .row h3{
+        font-size: 2.5rem;
+    }
+    
+    .seven h2+p{
+        font-size: 1.2rem;
+    }
+    
+    .seven hgroup p {
+        padding: 20px 0 10px 0;
+    }
+
+    .eight{
+        height: 30vh;
+    }
+    
+    .eight h4{
+        font-size: 1.6rem;
+    }
+    
+    .nine{
+        padding: 80px 0;
+        text-align: center;
+    
+    }
+    
+    .nine h2{
+        font-size: 2.2rem;
+    }
+    
+    .nine p{
+        font-size: 1.2rem;
+    }
+    
+     .ten p{
+        font-size: 1.2rem;
+    }
+    
+    .ten button{
+        position: relative;
+        bottom: 20px;
+    
+    }
+    
+    .ten form{
+        margin-top: 20px;
+    }
+    
+    .ten form input {
+        flex: 0 0 100%;
+        margin: 0;
+    }
+    
+    footer .icons li a {
+   
+        font-size: 1.6rem;
+    }
+    
+    
+
+}
+
+  
